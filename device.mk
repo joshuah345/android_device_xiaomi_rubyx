@@ -304,7 +304,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
-    hardware/xiaomi
+    hardware/xiaomi-mtk
 
 # Thermal
 PRODUCT_PACKAGES += \
