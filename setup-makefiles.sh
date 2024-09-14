@@ -30,7 +30,7 @@ function vendor_imports() {
 		"device/xiaomi/rubyx",
 		"hardware/mediatek",
 		"hardware/mediatek/libmtkperf_client",
-		"hardware/xiaomi"
+		"hardware/xiaomi-mtk"
 EOF
 }
 
