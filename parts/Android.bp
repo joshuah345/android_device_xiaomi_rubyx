@@ -17,4 +17,7 @@ android_app {
     static_libs: [
         "org.lineageos.settings.resources",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 }
