@@ -6,7 +6,7 @@
 //
 
 android_app {
-    name: "XiaomiDolby",
+    name: "XiaomiDolby.rubyx",
 
     srcs: ["src/**/*.kt"],
     resource_dirs: ["res"],
