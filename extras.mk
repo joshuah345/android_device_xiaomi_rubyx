@@ -1,29 +1,35 @@
-# extras typically found in lineage_garnet.mk
+# extras typically found in lineage_<codename>.mk
 
 # ViPER4Android (if exists)
 $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Do things if GMS added
 ifeq ($(strip $(WITH_GMS)),true)
+	USES_BASIC_CALL_RECORDER := true
+endif
 
-	# import BCR
-    $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+# Detect risingOS dir
+ifeq ("$(wildcard $(vendor/rising))", "")
 
-	# rising specific
+# Do things if GMS added (in risingOS)
+ifeq ($(strip $(WITH_GMS)),true)
     TARGET_DEFAULT_PIXEL_LAUNCHER := true
 endif
 
-# Include Lawnchair 14 (rising)
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
+RISING_MAINTAINER := hiroshi. (Superuser)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Dimensity 1080" \
-    RISING_MAINTAINER="hiroshi. (Superuser)"
+    RISING_MAINTAINER="$(RISING_MAINTAINER)"
 
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.pixelprops.gms=true 
 
-RISING_MAINTAINER := hiroshi. (Superuser)
+PRODUCT_PACKAGES += \
+     SettingsIntelligenceGooglePrebuilt
+endif
 
 # -------
 TARGET_SUPPORTS_BLUR := true
@@ -42,5 +48,6 @@ endif
 endif
 endif
 
- PRODUCT_PACKAGES += \
-     SettingsIntelligenceGooglePrebuilt
+ifeq ($(strip $(USES_BASIC_CALL_RECORDER)),true)
+    $(call inherit-product, vendor/bcr/bcr.mk)
+endif
