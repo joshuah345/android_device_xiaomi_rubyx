@@ -31,6 +31,13 @@ PRODUCT_PACKAGES += \
      SettingsIntelligenceGooglePrebuilt
 endif
 
+# Detect Evolution X 
+ifeq (,$(findstring EvolutionX, $(LINEAGE_VERSION)))
+    $(warning we are evolving!)
+    PRODUCT_PACKAGES += \
+        EvolutionSettingsOverlayRuby
+endif
+
 # -------
 TARGET_SUPPORTS_BLUR := true
 
