@@ -29,4 +29,16 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := Redmi/ruby_global/ruby:14/UP1A.231005.007/V816.0.4.0.UMOMIXM:user/release-keys
 
-$(call inherit-product-if-exists, $(LOCAL_PATH)/extras.mk)
+# ViPER4Android (if exists)
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+
+# BCR (Basic Call Recorder) if GAPPS
+ifeq ($(strip $(WITH_GMS)),true)
+	$(call inherit-product, vendor/bcr/bcr.mk)
+endif
+
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby.rubyx
+    
+TARGET_SUPPORTS_BLUR := true
