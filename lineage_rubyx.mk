@@ -37,10 +37,6 @@ ifeq ($(strip $(WITH_GMS)),true)
 	$(call inherit-product, vendor/bcr/bcr.mk)
 endif
 
-ifeq ($(strip $(EVO_BUILD_TYPE)),Official)
-	PRODUCT_PACKAGES += EvolutionSettingsOverlayRuby
-endif
-
 # Dolby
 PRODUCT_PACKAGES += \
     XiaomiDolby.rubyx
