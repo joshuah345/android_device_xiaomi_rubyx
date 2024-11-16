@@ -25,5 +25,6 @@ PRODUCT_SYSTEM_DEVICE := ruby
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="ruby-user 14 UP1A.231005.007 V816.0.4.0.UMOMIXM release-keys" \
-    BuildFingerprint=Redmi/ruby_global/ruby:14/UP1A.231005.007/V816.0.4.0.UMOMIXM:user/release-keys
+    BuildDesc="ruby-user 14 UP1A.230620.001 V816.0.10.0.UMOMIXM release-keys" \
+    BuildFingerprint=Redmi/ruby_global/ruby:14/UP1A.230620.001/V816.0.10.0.UMOMIXM:user/release-keys
+
