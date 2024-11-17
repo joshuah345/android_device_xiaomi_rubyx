@@ -28,3 +28,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="ruby-user 14 UP1A.230620.001 V816.0.10.0.UMOMIXM release-keys" \
     BuildFingerprint=Redmi/ruby_global/ruby:14/UP1A.230620.001/V816.0.10.0.UMOMIXM:user/release-keys
 
+PRODUCT_PACKAGES += \
+    EvolutionSettingsOverlayRuby
