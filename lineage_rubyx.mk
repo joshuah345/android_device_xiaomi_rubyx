@@ -27,3 +27,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="ruby-user 14 UP1A.231005.007 V816.0.4.0.UMOMIXM release-keys" \
     BuildFingerprint=Redmi/ruby_global/ruby:14/UP1A.231005.007/V816.0.4.0.UMOMIXM:user/release-keys
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Dimensity 1080"
