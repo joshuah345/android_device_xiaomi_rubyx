@@ -31,7 +31,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Dimensity 1080"
     
-
 # Dolby
 PRODUCT_PACKAGES += \
     XiaomiDolby.rubyx
+    
+TARGET_SUPPORTS_BLUR := true
