@@ -89,6 +89,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek-mali \
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby.rubyx
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
